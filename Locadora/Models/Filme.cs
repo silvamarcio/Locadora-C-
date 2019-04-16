@@ -12,7 +12,16 @@ namespace Locadora.Models
         public string Genre { get; set; }
         public double Price { get; set; }
 
+        public Filme()
+        {
+        }
 
-
+        public Filme( string title, string genre, double price)
+        {
+          
+            Title = title;
+            Genre = genre;
+            Price = price;
+        }
     }
 }
