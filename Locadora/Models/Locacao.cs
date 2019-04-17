@@ -34,12 +34,7 @@ namespace Locadora.Models
         public double SubTotal()
         {
             RentalPrice = 0;
-
-            foreach(Filme f in Filmes)
-            {
-                RentalPrice = Filmes.Sum(x => x.Price);
-            }
-
+            RentalPrice = Filmes.Sum(x => x.Price);
             return RentalPrice;
         }
     }
