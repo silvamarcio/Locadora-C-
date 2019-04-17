@@ -144,6 +144,11 @@ namespace Locadora.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public async Task<IActionResult> Rent()
+        {
+            return View (await _context.Filme.ToListAsync());
+        }
+
         private bool LocacaoExists(int id)
         {
             return _context.Locacao.Any(e => e.Id == id);

@@ -148,5 +148,10 @@ namespace Locadora.Controllers
         {
             return _context.Filme.Any(e => e.Id == id);
         }
+
+        public async Task<IActionResult> Rent()
+        {
+            return RedirectToAction("Rent","Locacaos");
+        }
     }
 }
